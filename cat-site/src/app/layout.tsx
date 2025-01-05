@@ -32,6 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="bg-slate-600">
+          hello cats!
+        </header>
         {children}
       </body>
     </html>

@@ -16,7 +16,7 @@ export const cats: Cat[] = [
         name: "Kepler",
         color: "Orange",
         age: 3,
-        price: 1,
+        price: 1000000,
         hasSiblings: true,
         siblingNames: ["Sheldon", "Athena"]
     },
