@@ -11,8 +11,8 @@ export default function CatsList({ cats }: { cats: Cat[] }) {
                         <Link href={'cats/' + cat.id}>
                             <Image className="mx-auto rounded-lg hover:shadow-lg" src={cat.imageUrl} alt={cat.name} width={300} height={300}></Image>
                         </Link>
-                        <h2 className="text-center font-black text-slate-900 font-Lexend mt-1">{cat.name.toLowerCase()}</h2>
-                        <p className="text-center text-slate-900 font-Lexend">${cat.price}</p>
+                        <h2 className="text-center font-black text-purple-900 font-Lexend mt-1">{cat.name.toLowerCase()}</h2>
+                        <p className="text-center text-purple-900 font-Lexend">${cat.price}</p>
                     </div>
                 ))}
             </div>

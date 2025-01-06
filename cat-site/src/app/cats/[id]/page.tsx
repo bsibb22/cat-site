@@ -1,4 +1,5 @@
 import { cats } from "@/app/cat-data"
+import { connectToDb } from "@/app/api/db"
 
 export default function CatPage({ params }: { params: { id: string } }) {
     const cat = cats.find(cat => cat.id === params.id);
