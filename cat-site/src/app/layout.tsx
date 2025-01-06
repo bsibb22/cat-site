@@ -33,13 +33,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="bg-yellow-700 py-4 mx-auto">
-          <div className="flex justify-start gap-4 mx-8">
-            <Link href="/home" className="text-yellow-50 hover:text-yellow-200">home</Link>
-            <Link href="/cats">meet the cats</Link>
-            <Link href="/cats">schedule</Link>
+        <nav className="bg-yellow-700 py-4 mx-auto">
+          <div className="flex justify-start space-x-8 mx-8">
+            <Link href="/home" className="text-yellow-50 hover:text-yellow-200 font-Lexend">home</Link>
+            <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">meet the cats</Link>
+            <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">schedule</Link>
           </div>
-        </header>
+        </nav>
         {children}
       </body>
     </html>
