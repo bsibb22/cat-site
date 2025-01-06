@@ -1,8 +1,7 @@
-import { cats } from "@/app/cat-data"
-import { connectToDb } from "@/app/api/db"
+export default async function CatPage({ params }: { params: { id: string } }) {
+    const response = await fetch(`http://localhost:3000/api/cats/${params.id}`)
+    const cat = await response.json();
 
-export default function CatPage({ params }: { params: { id: string } }) {
-    const cat = cats.find(cat => cat.id === params.id);
     if (!cat) {
         return <h1>No cat found!</h1>
     }
