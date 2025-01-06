@@ -13,7 +13,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     // if the cat does not exist
     if (!cat) {
         return new Response(
-            "Cat not found!",
+            JSON.stringify({ message: "Cat not found!" }),
             { status: 404 }
         )
     }
