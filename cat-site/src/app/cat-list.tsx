@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function CatsList({ cats }: { cats: Cat[] }) {
     return (
         <div className="container justify-center mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {cats.map(cat => (
                     <div key={cat.id}>
                         <Link href={'cats/' + cat.id}>
