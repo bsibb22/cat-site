@@ -13,16 +13,13 @@
 use('cats-nextjs');
 
 // Insert a few documents into the sales collection.
-db.getCollection('cats').insertMany([
+db.getCollection('faves').insertMany([
     {
-        id: "106",
-        imageUrl: "/tenders.png",
-        name: "Tenders",
-        color: "Tortoiseshell",
-        age: 8,
-        price: 75,
-        desc: "Tenders likes to lay in the sun!",
-        hasSiblings: false,
-        siblingNames: []
+        userId: '1',
+        faveIds: ['100', '101', '102', '104']
+    },
+    {
+        userId: '2',
+        faveIds: ['106', '103']
     }
 ]);
