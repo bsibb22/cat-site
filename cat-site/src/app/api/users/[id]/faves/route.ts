@@ -5,7 +5,7 @@ import { connectToDb } from "@/app/api/db";
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
     const { db } = await connectToDb();
 
-    const userId = params.id;
+    const userId = (await params).id;
     const userFaves = await db.collection('faves').findOne({ userId });
 
     if (!userFaves) {
@@ -40,7 +40,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
     const { db } = await connectToDb();
 
-    const userId = params.id;
+    const userId = (await params).id;
     const body = await request.json();
     const catId = body.catId;
 
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
     const { db } = await connectToDb();
 
-    const userId = params.id;
+    const userId = (await params).id;
     const body = await request.json();
     const catId = body.catId;
 
