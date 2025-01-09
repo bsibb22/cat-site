@@ -1,10 +1,12 @@
 import CatsList from "../cat-list";
 
+export const dynamic = 'force-dynamic';
+
 export default async function CatsPage() {
-    const response = await fetch('http://localhost:3000/api/cats');
+    const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/cats');
     const cats = await response.json();
 
-    const favesResponse = await fetch('http://localhost:3000/api/users/1/faves', {
+    const favesResponse = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/users/1/faves', {
         cache: 'no-cache'
     });
     const faveCats = await favesResponse.json();

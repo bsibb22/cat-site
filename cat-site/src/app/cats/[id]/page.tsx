@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default async function CatPage(props: { params: Promise<{ id: string }> }) {
     const params = await props.params;
-    const response = await fetch(`http://localhost:3000/api/cats/${params.id}`)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/cats/${params.id}`)
     const cat = await response.json();
 
     if (!cat) {

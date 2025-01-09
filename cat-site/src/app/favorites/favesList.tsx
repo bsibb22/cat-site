@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Cat } from "@/app/cat-data"
 
 export default function FavoriteCatsList({ initialFaves }: { initialFaves: Cat[] }) {
-    const [faveCats, setFaveCats] = useState(initialFaves);
+    const [faveCats] = useState(initialFaves);
 
     return (
         <>
