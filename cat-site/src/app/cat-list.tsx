@@ -49,13 +49,16 @@ export default function CatsList({ cats, initialFaves = [] }: { cats: Cat[], ini
                         </Link>
                         <h2 className="text-center font-black text-purple-900 font-Lexend mt-1">{cat.name.toLowerCase()}</h2>
                         <p className="text-center text-purple-900 font-Lexend">${cat.price}</p>
-                        {
-                            catFavorited(cat.id) ?
-                                <button onClick={() => unfavorite(cat.id)} className="text-slate-900 font-Lexend">Remove from Favorites</button>
-                                :
-                                <button onClick={() => favorite(cat.id)} className="text-slate-900 font-Lexend">Add to Favorites</button>
-                        }
-
+                        <div className="flex justify-center">
+                            {
+                                catFavorited(cat.id) ?
+                                    <button onClick={() => unfavorite(cat.id)} className="mx-auto rounded-md bg-purple-800 hover:bg-purple-200 border-purple-800 border-2 text-slate-200
+                                        hover:text-gray-800 font-semibold font-Lexend px-4 py-1">★ Unfavorite</button>
+                                    :
+                                    <button onClick={() => favorite(cat.id)} className="mx-auto rounded-md bg-purple-800 hover:bg-purple-200 border-purple-800 border-2 text-slate-200
+                                        hover:text-gray-800 font-semibold font-Lexend px-4 py-1">☆ Favorite</button>
+                            }
+                        </div>
                     </div>
                 ))}
             </div>
