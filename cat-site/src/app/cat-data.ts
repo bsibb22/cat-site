@@ -5,6 +5,7 @@ export interface Cat {
     color: string,
     age: number,
     price: number,
+    desc: string,
     hasSiblings: boolean,
     siblingNames: string[]
 }
@@ -17,6 +18,7 @@ export const cats: Cat[] = [
         color: "Orange",
         age: 3,
         price: 1000000,
+        desc: "",
         hasSiblings: true,
         siblingNames: ["Sheldon", "Athena"]
     },
@@ -27,6 +29,7 @@ export const cats: Cat[] = [
         color: "Orange",
         age: 4,
         price: 120,
+        desc: "",
         hasSiblings: true,
         siblingNames: ["Kepler", "Athena"]
     },
@@ -37,6 +40,7 @@ export const cats: Cat[] = [
         color: "Orange",
         age: 6,
         price: 120,
+        desc: "",
         hasSiblings: true,
         siblingNames: ["Kepler", "Athena"]
     },
@@ -47,6 +51,7 @@ export const cats: Cat[] = [
         color: "Orange",
         age: 5,
         price: 100,
+        desc: "",
         hasSiblings: false,
         siblingNames: []
     },
@@ -57,6 +62,7 @@ export const cats: Cat[] = [
         color: "Grey",
         age: 1,
         price: 80,
+        desc: "",
         hasSiblings: false,
         siblingNames: []
     },

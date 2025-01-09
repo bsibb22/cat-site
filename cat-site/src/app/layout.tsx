@@ -37,7 +37,7 @@ export default function RootLayout({
           <div className="flex justify-start space-x-8 mx-8">
             <Link href="/home" className="text-yellow-50 hover:text-yellow-200 font-Lexend">home</Link>
             <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">meet the cats</Link>
-            <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">schedule</Link>
+            <Link href="/favorites" className="text-yellow-50 hover:text-yellow-200 font-Lexend">favorites</Link>
           </div>
         </nav>
         {children}

@@ -62,7 +62,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     }).toArray();
 
     return new Response(
-        JSON.stringify(updatedFaves),
+        JSON.stringify(faveCats),
         {
             status: 201,
             headers: {
@@ -110,7 +110,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
     }).toArray();
 
     return new Response(
-        JSON.stringify(updatedFaves),
+        JSON.stringify(faveCats),
         {
             status: 201,
             headers: {
