@@ -13,9 +13,9 @@ export default async function CatPage(props: { params: Promise<{ id: string }> }
     return (
         <div className="container mx-auto text-center">
             <div className="grid grid-cols-1 gap-4">
-                <div className="flex w-full mx-auto p-2 bg-yellow-50 rounded-lg">
-                    <Image src={cat.imageUrl} alt={cat.name} width={400} height={400} className="rounded-md"></Image>
-                    <p className="font-Lexend text-purple-950 mx-2 text-left">
+                <div className="sm:inline md:flex w-full mx-auto p-2 bg-yellow-50 rounded-lg">
+                    <Image src={cat.imageUrl} alt={cat.name} width={400} height={400} className="rounded-md mx-auto"></Image>
+                    <p className="font-Lexend text-purple-950 mx-2 text-left md:my-0 my-2">
                         <b>{cat.name}</b> ({cat.age})<br />
                         Color: {cat.color}<br />
                         Price: ${cat.price}<br /><br />

@@ -25,7 +25,7 @@ async function Footer() {
     <Link href="/favorites">favorites</Link>
   ];
   return (
-    <div className="mt-8 bg-yellow-700 py-4">
+    <div className="mt-8 bg-yellow-700 py-4 flex flex-col">
       <h1 className="text-center font-Lexend text-purple-950 font-black text-4xl">
         🐾 cat cafe 🐾
       </h1>
@@ -49,16 +49,18 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <nav className="bg-yellow-700 py-4 mx-auto mb-8">
-          <div className="flex justify-start space-x-8 mx-8">
+        <nav className="bg-yellow-700 py-4 w-full mb-8 flex justify-start">
+          <div className="space-x-8 mx-8">
             <Link href="/" className="text-yellow-50 hover:text-yellow-200 font-Lexend">home</Link>
             <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">meet the cats</Link>
             <Link href="/favorites" className="text-yellow-50 hover:text-yellow-200 font-Lexend">favorites</Link>
           </div>
         </nav>
-        {children}
+        <main className="flex-grow">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

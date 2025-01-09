@@ -10,7 +10,7 @@ export default function FavoriteCatsList({ initialFaves }: { initialFaves: Cat[]
     return (
         <>
             <div className="container mx-auto text-center">
-                <h1 className="font-semibold text-purple-950 font-Lexend">Your Favorite Cats</h1>
+                <h1 className="font-black text-purple-950 font-Lexend text-6xl mb-8">your favorite cats</h1>
                 <div className="grid grid-cols-1 gap-4">
                     {
                         faveCats.map((cat) => (
