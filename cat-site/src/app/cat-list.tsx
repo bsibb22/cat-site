@@ -41,7 +41,7 @@ export default function CatsList({ cats, initialFaves = [] }: { cats: Cat[], ini
 
     return (
         <div className="container justify-center mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {cats.map(cat => (
                     <div key={cat.id}>
                         <Link href={'cats/' + cat.id}>
@@ -53,10 +53,10 @@ export default function CatsList({ cats, initialFaves = [] }: { cats: Cat[], ini
                             {
                                 catFavorited(cat.id) ?
                                     <button onClick={() => unfavorite(cat.id)} className="mx-auto rounded-md bg-purple-800 hover:bg-purple-200 border-purple-800 border-2 text-slate-200
-                                        hover:text-gray-800 font-semibold font-Lexend px-4 py-1">★ Unfavorite</button>
+                                        hover:text-gray-800 font-semibold font-Lexend px-4 py-1 mt-1">★ Unfavorite</button>
                                     :
                                     <button onClick={() => favorite(cat.id)} className="mx-auto rounded-md bg-purple-800 hover:bg-purple-200 border-purple-800 border-2 text-slate-200
-                                        hover:text-gray-800 font-semibold font-Lexend px-4 py-1">☆ Favorite</button>
+                                        hover:text-gray-800 font-semibold font-Lexend px-4 py-1 mt-1">☆ Favorite</button>
                             }
                         </div>
                     </div>
