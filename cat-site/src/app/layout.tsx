@@ -22,7 +22,8 @@ async function Footer() {
   const footerLinks = [
     <Link href="/">home</Link>,
     <Link href="/cats">cats</Link>,
-    <Link href="/favorites">favorites</Link>
+    <Link href="/favorites">favorites</Link>,
+    <Link href="/schedule">schedule</Link>
   ];
   return (
     <div className="mt-8 bg-yellow-700 py-4 flex flex-col">
@@ -36,6 +37,24 @@ async function Footer() {
           }
         </ul>
       </div>
+      <p className="font-Lexend text-yellow-400 text-center mt-4">
+        (C) copyright brandon sibbitt 2025
+      </p>
+    </div>
+  )
+}
+
+function Header() {
+  return (
+    <div className="flex justify-start bg-yellow-700 py-4 w-full mb-8 items-center">
+      <h1 className="font-Lexend font-black text-4xl text-purple-950 ml-8">cat cafe 🐾</h1>
+      <nav>
+        <div className="space-x-8 mx-8">
+          <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">meet the cats</Link>
+          <Link href="/favorites" className="text-yellow-50 hover:text-yellow-200 font-Lexend">my favorites</Link>
+          <Link href="/schedule" className="text-yellow-50 hover:text-yellow-200 font-Lexend">schedule</Link>
+        </div>
+      </nav>
     </div>
   )
 }
@@ -51,13 +70,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <nav className="bg-yellow-700 py-4 w-full mb-8 flex justify-start">
-          <div className="space-x-8 mx-8">
-            <Link href="/" className="text-yellow-50 hover:text-yellow-200 font-Lexend">home</Link>
-            <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">meet the cats</Link>
-            <Link href="/favorites" className="text-yellow-50 hover:text-yellow-200 font-Lexend">favorites</Link>
-          </div>
-        </nav>
+        <Header />
         <main className="flex-grow">
           {children}
         </main>
