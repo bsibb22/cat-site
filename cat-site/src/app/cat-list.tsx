@@ -43,7 +43,7 @@ export default function CatsList({ cats, initialFaves = [] }: { cats: Cat[], ini
         <div className="container justify-center mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {cats.map(cat => (
-                    <div key={cat.id}>
+                    <div key={cat.id} className="animate-appear">
                         <Link href={'cats/' + cat.id}>
                             <Image className="mx-auto rounded-lg hover:shadow-lg" src={cat.imageUrl} alt={cat.name} width={300} height={300}></Image>
                         </Link>
