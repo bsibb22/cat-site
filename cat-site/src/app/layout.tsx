@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import React from 'react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +32,15 @@ async function Footer() {
         🐾 cat cafe 🐾
       </h1>
       <div>
-        <ul className="flex justify-center space-x-2">
+        <ul className="flex justify-center space-x-2.5">
           {
-            footerLinks.map((link) => <><li key={footerLinks.indexOf(link)} className="underline font-Lexend text-yellow-100 hover:text-yellow-200">{link}</li>{footerLinks.indexOf(link) !== footerLinks.length - 1 && <p>|</p>}</>)
+            footerLinks.map((link, index) => (
+              <React.Fragment key={index}>
+                <li className="underline font-Lexend text-yellow-100 hover:text-yellow-200">{link}</li>
+                {index !== footerLinks.length - 1 && <p>|</p>}
+              </React.Fragment>
+            )
+            )
           }
         </ul>
       </div>
@@ -47,7 +54,7 @@ async function Footer() {
 function Header() {
   return (
     <div className="flex justify-start bg-yellow-700 py-4 w-full mb-8 items-center">
-      <h1 className="font-Lexend font-black text-4xl text-purple-950 ml-8">cat cafe 🐾</h1>
+      <Link href="/" className="font-Lexend font-black text-4xl text-purple-950 ml-8">cat cafe 🐾</Link>
       <nav>
         <div className="space-x-8 mx-8">
           <Link href="/cats" className="text-yellow-50 hover:text-yellow-200 font-Lexend">meet the cats</Link>
